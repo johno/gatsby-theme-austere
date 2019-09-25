@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "basic",
+  "version": "0.0.1",
+  "author": "John Otander",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn develop",
+    "develop": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.15.23",
+    "gatsby-theme-austere": "^0.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}

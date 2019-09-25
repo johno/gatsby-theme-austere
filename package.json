@@ -1,0 +1,19 @@
+{
+  "name": "gatsby-theme-workspace",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn workspace basic start",
+    "build": "yarn workspace basic build",
+    "publish": "lerna publish"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "dependencies": {
+    "lerna": "^3.16.4"
+  }
+}
