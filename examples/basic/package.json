@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "basic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "John Otander",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "gatsby": "^2.15.23",
-    "gatsby-theme-austere": "^0.0.1",
+    "gatsby-theme-austere": "^0.0.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }
