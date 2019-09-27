@@ -1,28 +1,12 @@
-/** @jsx jsx */
-import {Link} from "gatsby"
-import {Styled, jsx} from 'theme-ui'
+import React from 'react'
 import {Helmet} from 'react-helmet'
 
-import Layout from '../../components/layout'
+import Layout from '../../components/posts-layout'
+import PostList from '../../components/post-list'
 
 export default ({ data }) => (
   <Layout title="Posts" titleTagName="h1">
     <Helmet title="Posts" />
-    <Styled.ul
-      sx={{
-        variant: 'styles.postlist'
-      }}
-    >
-      {data.allBlogPost.edges.map(({ node: post }) => (
-        <Styled.li>
-          <Styled.a
-            as={Link}
-            to={post.slug}
-          >
-            {post.title}
-          </Styled.a>
-        </Styled.li>
-      ))}
-    </Styled.ul>
+    <PostList posts={data.allBlogPost.edges} />
   </Layout>
 )

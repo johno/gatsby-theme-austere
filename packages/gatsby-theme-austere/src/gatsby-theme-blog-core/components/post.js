@@ -1,14 +1,14 @@
 import React from "react"
-import {Styled} from 'theme-ui'
 import {MDXRenderer} from "gatsby-plugin-mdx"
 import {Helmet} from 'react-helmet'
 
-import Layout from '../../components/layout'
+import Layout from '../../components/post-layout'
+import PostTitle from '../../components/post-title'
 
 export default ({ data: { blogPost } })=> (
   <Layout>
     <Helmet title={blogPost.title} />
-    <Styled.h1>{blogPost.title}</Styled.h1>
+    <PostTitle>{blogPost.title}</PostTitle>
     <MDXRenderer>{blogPost.body}</MDXRenderer>
   </Layout>
 )
