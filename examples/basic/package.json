@@ -10,9 +10,29 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "gatsby": "^2.15.23",
+    "gatsby": "^2.15.28",
     "gatsby-theme-austere": "^0.0.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1"
+  },
+  "devDependencies": {
+    "husky": "^3.0.7",
+    "lint-staged": "^9.4.1",
+    "prettier": "^1.18.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md,mdx,json}": [
+      "prettier --write --no-semi --single-quote",
+      "git add"
+    ]
   }
 }
